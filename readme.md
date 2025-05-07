@@ -14,4 +14,4 @@ Sistema básico para gerenciamento de eventos e inscrições.
 
 1. `npm install`
 2. `node server.js`
-3. Acesse em `http://localhost:3000/`
+3. Acesse em `http://localhost:5500/`

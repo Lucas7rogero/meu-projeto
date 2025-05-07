@@ -1,3 +1,3 @@
 exports.home = (req, res) => {
-  res.render('home', { titulo: 'Plataforma de Eventos' });
+  res.render("home");
 };
