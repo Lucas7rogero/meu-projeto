@@ -6,4 +6,4 @@ Este sistema é uma plataforma para criação e inscrição em eventos, com aute
 
 ## Diagrama do Banco de Dados
 
-![modelo do banco](assets/modelo-banco.png)
+![modelo do banco](modelo-banco.png)
