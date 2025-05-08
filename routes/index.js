@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const HomeController = require('../controllers/HomeController');
 
-router.get('/', HomeController.index);
+router.get("/", (req, res) => {
+  res.send("Celso baitola");
+});
 
 module.exports = router;
