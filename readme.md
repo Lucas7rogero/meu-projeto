@@ -9,27 +9,24 @@ O objetivo deste projeto é oferecer uma plataforma que permita a criação, vis
 ## 🌐 Estrutura de Pastas
 
 ```plataforma-eventos/
-├── assets/ # Arquivos estáticos como imagens e fontes
-├── config/ # Arquivos de configuração (ex: conexão com banco)
+├── assets/
+├── config/
 │ └── database.js
-├── controllers/ # Lógica de controle das requisições
+├── controllers/
 │ └── HomeController.js
-├── docs/ # Documentação e modelos do banco de dados
-│ ├── modelo-banco.png
-│ └── modelo-banco.sql
-├── models/ # Definição dos modelos de dados
+├── models/
 │ └── User.js
-├── node_modules/ # Módulos do Node.js
-├── routes/ # Definição de rotas
+├── node_modules/
+├── routes/
 │ └── index.js
-├── scripts/ # JS públicos (se aplicável)
-├── services/ # Serviços auxiliares
+├── scripts/
+├── services/
 │ └── userService.js
-├── styles/ # Arquivos CSS públicos
-├── tests/ # Testes automatizados
+├── styles/
+├── tests/
 │ └── example.test.js
-├── views/ # Templates EJS
-├── .env.example # Exemplo de variáveis de ambiente
+├── views/
+├── .env.example
 ├── .gitignore
 ├── jest.config.js
 ├── package.json
