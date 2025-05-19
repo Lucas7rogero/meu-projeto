@@ -1,21 +1,26 @@
+DROP TABLE IF EXISTS subscriptions;
+DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(255),
-    email VARCHAR(255)
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE events (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(255),
-    data DATETIME,
-    user_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT NOT NULL,
+    local VARCHAR(255) NOT NULL,
+    data TIMESTAMP NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES users(id)
 );
 
 CREATE TABLE subscriptions (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
-    event_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (event_id) REFERENCES events(id)
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    event_id INTEGER NOT NULL REFERENCES events(id),
+    UNIQUE(user_id, event_id)
 );
